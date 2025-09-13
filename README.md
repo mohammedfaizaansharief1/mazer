@@ -184,3 +184,14 @@ mazer-task3/
 ├── README.md                       # Project documentation
 └── node_modules/                   # (if using npm or Vite)
 ```
+
+---
+
+## 📂 GitHub Repository
+
+  [Mazer Dashboard](https://github.com/mohammedfaizaansharief1/mazer.git)
+
+
+---
+
+*This project was completed as part of an internship task.*
