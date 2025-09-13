@@ -8,9 +8,14 @@
 {% endblock %}
 
 {% block content %}
-<div class="page-heading">
+<div class="page-heading" style="
+    display: flex;
+    justify-content: space-between;">
     <h3>Profile Statistics</h3>
+    <a href="/users.html" class="btn btn-primary">Total Users</a>
 </div> 
+
+
 <div class="page-content"> 
     <section class="row">
         <div class="col-12 col-lg-9">
@@ -84,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
@@ -95,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-12 col-xl-4">
                     <div class="card">
@@ -254,6 +259,9 @@
                 </div>
             </div>
         </div>
+
+        
+
         <div class="col-12 col-lg-3">
             <div class="card">
                 <div class="card-body py-4 px-4">
@@ -314,6 +322,18 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Profile Visit</h4>
+                        </div>
+                        <div class="card-body">
+                            <div id="chart-profile-visit"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 </div>
 {% endblock %}

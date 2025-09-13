@@ -95,8 +95,8 @@ $btn-colors: (
 //
 // Settings for the `<body>` element.
 
-$body-bg: #f2f7ff !default;
-$body-color: #607080 !default;
+$body-bg: #9fbdeb !default;
+$body-color: #333 !default;
 $body-text-align: null !default;
 
 // Bootstrap Variables
@@ -106,7 +106,7 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-600: #5e676e !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
@@ -128,7 +128,7 @@ $grays: (
 ) !default;
 // fusv-enable
 
-$blue:    #435ebe !default;
+$blue:    #007BFF !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;

@@ -47,90 +47,140 @@ npm run dev
 
 4. Open `http://localhost:5173` in your browser
 
-### Building with Docker
 
-- Clone the repository `git clone https://github.com/zuramai/mazer`
-- Make sure you have Docker installed and run:
-    - `docker build -t mazer-frontend .`
-    - `docker run -it -d -p 5173:80 --name mazer mazer-frontend`
-    - Open `http://localhost:5173`
-### Using CDN 
-Simple example using CDN from [jsdelivr.net](https://www.jsdelivr.com/).
+---
 
-```html
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Mazer Admin Dashboard</title>
+# Task 3: Customization & Integration of Mazer Admin Dashboard
 
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/svg/favicon.svg" type="image/x-icon">
+This project demonstrates my work on **Task 3**, where I customized and integrated a real-world **Mazer Admin Dashboard** template (Bootstrap 5) and connected it to dynamic data for front-end functionality.
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app-dark.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/iconly.css">
-</head>
+---
 
-<body>
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/static/js/initTheme.js"></script>
-    <!-- Start content here -->
+## Project Overview
 
-    <!-- End content -->
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/static/js/components/dark.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+Task 3 required evaluating my ability to **customize a pre-built admin dashboard template** and integrate it with sample data to create a functional front-end interface. The goal was to make the dashboard **responsive, visually appealing, and data-driven**.
 
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/js/app.js"></script>
+---
 
-    <!-- Need: Apexcharts -->
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/extensions/apexcharts/apexcharts.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/static/js/pages/dashboard.js"></script>
-</body>
+## Main Steps Involved
 
-</html>
+1. **Template Setup**
+   - Downloaded the **Mazer Admin Dashboard** template.
+   - Set up project folders with `index.html`, `user.html`, `assets/css`, `assets/js`, and `data.json`.
+
+2. **Customization**
+   - Updated the sidebar, navigation, and cards to reflect a realistic admin dashboard.
+   - Modified tables, buttons, and footer styling using **Bootstrap 5 classes** only.
+   - Removed unnecessary default styles from the template.
+
+3. **Dynamic Data Integration**
+   - Created a `data.json` file to store sample users.
+   - Wrote `custom.js` to fetch JSON data and populate tables dynamically.
+   - Connected data to tables, dashboard cards, and widgets.
+
+4. **Testing & Debugging**
+   - Verified dynamic table population.
+   - Ensured all UI elements are **responsive** on desktop, tablet, and mobile.
+   - Fixed JavaScript selector errors and path issues.
+
+---
+
+## Expected Outcome
+
+- A **fully responsive admin dashboard** with a dynamic user table.
+- Sidebar, cards, and footer correctly customized.
+- Tables and charts populated from JSON data.
+- Smooth and visually appealing interface using Bootstrap 5 utilities.
+
+---
+
+## Technology Stack
+
+- **Front-end**: HTML5, CSS3 (Bootstrap 5), JavaScript
+- **Template**: Mazer Admin Dashboard (Open-source Bootstrap 5)
+- **Data Source**: `data.json` (sample user data)
+- **Development Tools**: VS Code, Live Server, Browser
+
+---
+
+## How I Completed the Task
+
+1. **Project Setup**
+   - Installed Mazer template and structured the project folders.
+   - Added `user.html` for the dynamic user table.
+
+2. **Bootstrap Integration**
+   - Converted tables and cards to use **Bootstrap 5 classes**.
+   - Removed all custom CSS to rely on Bootstrap utilities for responsiveness and styling.
+
+3. **Dynamic Table Implementation**
+   - Created `data.json` with sample users.
+   - Wrote `custom.js` to fetch JSON and populate the table using `innerHTML` and DOM methods.
+
+4. **Testing**
+   - Ensured table updates dynamically without page reload.
+   - Verified all UI elements adapt to different screen sizes.
+
+---
+
+## Challenges & Solutions
+
+| Challenge | Solution |
+|-----------|---------|
+| `tbody` element not found | Added `id="usersTable"` to `<tbody>` and corrected JS selector. |
+| Bootstrap styling conflicts | Removed inline styles and used only Bootstrap 5 classes. |
+| Fetching JSON locally | Used Live Server to bypass CORS restrictions in local files. |
+| Maintaining template integrity | Only customized specific sections (sidebar, tables, cards) without breaking the template. |
+
+---
+
+## Time Taken
+
+- Total: **6 hours**
+
+---
+
+## Final Outcome
+
+- Fully functional **Mazer admin dashboard** customized to project needs.
+- Dynamic user table with data from `data.json`.
+- Responsive, modern UI using Bootstrap 5.
+- Clean, organized project structure for scalability.
+
+---
+
+## Setup
+
+### Steps
+
+1. **Clone the project**
+   ```bash
+   git clone <repository-url>
+   cd mazer-task3
+
+2. **Open Live Server**
+    Open index.html or user.html using VS Code Live Server or any static server.
+
+3. **View Dashboard**
+    Dynamic tables and cards should populate automatically.
+
+---
+
+**Project Structure**
+
 ```
-
-#### CDN Prefix
-
-You can use the url with a prefix like this:
+mazer-task3/
+│
+├── index.html                      # Dashboard homepage
+├── user.html                       # Dynamic user table
+├── data.json                       # Sample data for users
+├── assets/
+│   ├── css/
+│   │   └── bootstrap.min.css
+│   └── js/
+│       ├── custom.js               # Fetches data and populates tables
+│       └── bootstrap.bundle.min.js
+├── README.md                       # Project documentation
+└── node_modules/                   # (if using npm or Vite)
 ```
-https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo
-```
-
-A simple example:
-```
-https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app.css
-```
-
-## Community Mazer-based open sources
-
-- [CodeIgniter 4](https://github.com/irsyadulibad/mazer-codeigniter) by [@irsyadulibad](https://github.com/irsyadulibad)
-- [Laravel Mazer Starter](https://github.com/billalxcode/laravel-mazer-starter) by [@billalxcode](https://github.com/billalxcode)
-- [Nuxt](https://github.com/fzn0x/mazer-nuxt) by [@fzn0x](https://github.com/fzn0x)
-- [React JS Component Library](https://github.com/fachryansyah/react-mazer-ui) by [@fachryansyah](https://github.com/fachryansyah/)
-- [Adonisjs 5](https://github.com/afman42/mazer-adonisjs) by [@afman42](https://github.com/afman42/)
-- [Django](https://github.com/bimbims125/mazer-django) by [@bimbims125](https://github.com/bimbims125/)
-- [Flask](https://github.com/antheiz/mazer-flask) by [@antheiz](https://github.com/antheiz/)
-- [Symfony 6.3 (Mazer 2.1.0)](https://github.com/TheoD02/mazer-symfony-6.3/tree/mazer-2.1.0) by [@theod02](ttps://github.com/TheoD02)
-- [Spring-Thymeleaf](https://github.com/deyhay-enterprise/spring-project-mazer-template) by [@hi-rullah](https://github.com/hi-rullah)
-- [Ruby on Rails](https://github.com/noesya/mazer-rails) by [@noesya](https://github.com/noesya)
-- [Yii2](https://github.com/anovsiradj/yii2-theme-mazer) by [@anovsiradj](https://github.com/anovsiradj)
-- [Next JS](https://github.com/dipras/next-mazer) by [@dipras](https://github.com/dipras)
-- Did you make in another framework or tools? Open up Pull Requests and put yours here! 😃
-
-## Contributing
-
-Please follow [Contributing Guide](./CONTRIBUTING.md) before contributing.
-
-## License
-
-Mazer is under [MIT License](./LICENSE).
-
-## Author
-
-Mazer is created by <a href="https://saugi.me">Saugi</a>.
-
-## Sponsors
-
-![zuramai's sponsors](https://raw.githubusercontent.com/zuramai/static/main/sponsors.svg)
